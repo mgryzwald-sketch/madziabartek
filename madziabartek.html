@@ -1,0 +1,173 @@
+
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ślub – Madzia & Bartek</title>
+  <meta name="description" content="Strona ślubna Madzi i Bartka – informacje o ceremonii, przyjęciu, galeria i RSVP." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#fff9fb;
+      --paper:#ffffff;
+      --ink:#2c2c2c;
+      --muted:#6b6b6b;
+      --brand:#5b8ca6; /* kolor z zaproszeń */
+      --brand-dark:#3c6073;
+      --accent:#d7e6ec;
+      --shadow:0 10px 30px rgba(0,0,0,.08);
+      --radius:18px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;color:var(--ink);background:var(--bg)}
+    a{color:var(--brand);text-decoration:none}
+    img{max-width:100%;display:block}
+
+    /* NAVBAR */
+    .nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.7);backdrop-filter:blur(10px);border-bottom:1px solid #f0e8ea}
+    .nav__inner{display:flex;align-items:center;justify-content:space-between;max-width:1100px;margin:0 auto;padding:12px 20px}
+    .brand{font-family:"Playfair Display", serif;font-weight:700;font-size:20px;letter-spacing:.5px}
+    .brand span{color:var(--brand)}
+    .menu{display:flex;gap:14px;flex-wrap:wrap}
+    .menu a{padding:10px 12px;border-radius:999px}
+    .menu a:hover{background:var(--accent)}
+
+    /* HERO */
+    .hero{position:relative;display:grid;place-items:center;text-align:center;padding:86px 16px 64px;background:radial-gradient(1200px 500px at 50% -20%, #e5f0f5, transparent), linear-gradient(180deg,#fff, #f7fbfd)}
+    .hero h1{font-family:"Playfair Display", serif;font-size:44px;line-height:1.1;margin:10px 0 8px;color:var(--brand-dark)}
+    .hero p{margin:0 auto;color:var(--muted);max-width:700px;font-size:18px}
+    .pill{display:inline-flex;gap:8px;align-items:center;background:var(--paper);border:1px solid #f0e8ea;border-radius:999px;padding:8px 14px;box-shadow:var(--shadow);margin-bottom:14px}
+    .date{font-weight:600;color:var(--brand-dark)}
+
+    /* SECTIONS */
+    section{padding:56px 16px}
+    .wrap{max-width:1100px;margin:0 auto}
+    h2{font-family:"Playfair Display", serif;font-size:32px;margin:0 0 18px;color:var(--brand-dark)}
+    .card{background:var(--paper);border:1px solid #f0e8ea;border-radius:var(--radius);box-shadow:var(--shadow)}
+
+    /* STORY */
+    .story{display:grid;grid-template-columns:1fr;gap:16px}
+    .timeline{display:grid;gap:14px}
+    .step{display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:start;background:var(--paper);border:1px solid #f0e8ea;border-radius:14px;padding:14px}
+    .dot{width:10px;height:10px;border-radius:999px;background:var(--brand);margin-top:7px}
+    .step h3{margin:0;font-size:18px;color:var(--brand-dark)}
+    .step p{margin:4px 0 0;color:var(--muted)}
+
+    /* DETAILS */
+    .grid{display:grid;grid-template-columns:1fr;gap:16px}
+    .detail{padding:18px}
+    .detail h3{margin:0 0 6px;color:var(--brand-dark)}
+    .detail p{margin:0 0 8px;color:var(--muted)}
+    .chip{display:inline-block;padding:6px 10px;border:1px solid #f0e8ea;border-radius:999px;background:#fff}
+
+    /* GALLERY */
+    .gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+    .ph{aspect-ratio:1/1;border-radius:14px;background:linear-gradient(145deg,#d7e6ec,#fff);border:1px dashed #a3c2cf;display:grid;place-items:center;color:#5b8ca6}
+
+    /* RSVP */
+    form{display:grid;gap:12px}
+    input, select, textarea{padding:12px 14px;border:1px solid #c8dbe3;border-radius:12px;font:inherit;background:#fff}
+    button{border:0;padding:12px 16px;border-radius:12px;background:var(--brand);color:#fff;font-weight:600;cursor:pointer}
+    button:hover{background:var(--brand-dark)}
+
+    /* CONTACT */
+    .contact-cards{display:grid;grid-template-columns:1fr;gap:12px}
+    .contact-cards .card{padding:14px}
+
+    /* FOOTER */
+    footer{padding:26px 16px;text-align:center;color:#8a8a8a}
+
+    /* RESPONSIVE */
+    @media (min-width:700px){
+      .hero h1{font-size:56px}
+      .story{grid-template-columns:1.2fr .8fr;align-items:center}
+      .grid{grid-template-columns:1fr 1fr}
+      .gallery{grid-template-columns:repeat(4,1fr)}
+      .contact-cards{grid-template-columns:1fr 1fr 1fr}
+    }
+  </style>
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav class="nav">
+    <div class="nav__inner wrap">
+      <div class="brand">Madzia <span>&</span> Bartek</div>
+      <div class="menu">
+        <a href="#home">Powitanie</a>
+        <a href="#story">Nasza historia</a>
+        <a href="#details">Ceremonia & Wesele</a>
+        <a href="#gallery">Galeria</a>
+        <a href="#rsvp">RSVP</a>
+        <a href="#contact">Kontakt</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO / HOME -->
+  <header id="home" class="hero">
+    <div class="pill">
+      <span class="date">21.08.2026</span>
+      <span>•</span>
+      <span>Pruszków</span>
+    </div>
+    <h1>Cześć! Z tej strony <em>Madzia i Bartek</em> — nie możemy się doczekać! 💍</h1>
+    <p>
+      Zapraszamy na nasz wielki dzień. Tutaj znajdziesz wszystkie informacje: harmonogram, dojazd,
+      drobne wskazówki dla gości oraz formularz RSVP.
+    </p>
+  </header>
+
+  <!-- STORY -->
+  <section id="story">
+    <div class="wrap">
+      <h2>Nasza historia</h2>
+      <div class="story">
+        <div class="timeline">
+          <div class="step">
+            <div class="dot"></div>
+            <div>
+              <h3>Poznaliśmy się</h3>
+              <p>Spotkaliśmy się we wrześniu w pierwszej klasie liceum. Od razu złapaliśmy dobry kontakt.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="dot"></div>
+            <div>
+              <h3>Razem od 16 kwietnia</h3>
+              <p>Od tego dnia jesteśmy parą. Mieliśmy wtedy 17 lat i zaczęła się nasza wspólna droga. ❤️</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="dot"></div>
+            <div>
+              <h3>Dalszy ciąg...</h3>
+              <p>Tu uzupełnimy naszą historię później.</p>
+            </div>
+          </div>
+        </div>
+        <div class="card" style="padding:18px">
+          <h3>Krótko i od serca</h3>
+          <p>Jesteśmy wdzięczni, że możemy świętować to razem z Wami. Do zobaczenia na parkiecie! 🕺💃</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DETAILS -->
+  <section id="details" style="background:linear-gradient(180deg,#f7fbfd,#fff)">
+    <div class="wrap">
+      <h2>Ceremonia i wesele</h2>
+      <div class="grid">
+        <div class="card detail">
+          <h3>Uroczystość</h3>
+          <p>Data: <strong>21.08.2026</strong><br>Miejsce: <strong>Kościół Niepokalanego Poczęcia NMP, Pruszków-Żbików</strong></p>
+          <p>Adres: ul. 3 Maja 124, Pruszków<br>Godzina rozpoczęcia: <strong>15:00</strong></p>
+          <a class="chip" href="https://maps.app.goo.gl/Fk6HSzxnHcZ1hdHM7" target="_blank" rel="noopener">Zobacz lokalizację (Mapa)</a>
+        </div>
+        <div class="card detail">
+          <h3>Przyjęcie weselne</h3>
+          <p>Miejsce: <strong>Rybaczówka, Otwock Wielki</strong></p>
+          <p>Adres: ul. Wiślana 30B, Otwock Wielki<br>Start: <strong>ok
